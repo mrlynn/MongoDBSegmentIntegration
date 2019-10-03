@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-NKMXK2P');</script>
+    <!-- End Google Tag Manager -->
+    <style>
+      body {
+        padding-top: 20px;
+        padding-bottom: 20px;
+      }
+      .navbar {
+        margin-bottom: 20px;
+      }
+    </style>
+  <script>
+    !function(){var analytics=window.analytics=window.analytics||[];if(!analytics.initialize)if(analytics.invoked)window.console&&console.error&&console.error("Segment snippet included twice.");else{analytics.invoked=!0;analytics.methods=["trackSubmit","trackClick","trackLink","trackForm","pageview","identify","reset","group","track","ready","alias","debug","page","once","off","on"];analytics.factory=function(t){return function(){var e=Array.prototype.slice.call(arguments);e.unshift(t);analytics.push(e);return analytics}};for(var t=0;t<analytics.methods.length;t++){var e=analytics.methods[t];analytics[e]=analytics.factory(e)}analytics.load=function(t,e){var n=document.createElement("script");n.type="text/javascript";n.async=!0;n.src="https://cdn.segment.com/analytics.js/v1/"+t+"/analytics.min.js";var a=document.getElementsByTagName("script")[0];a.parentNode.insertBefore(n,a);analytics._loadOptions=e};analytics.SNIPPET_VERSION="4.1.0";
+    analytics.load("kNloWz8CK0tGaaDdfRVTcYypl3EoWUuK");
+    analytics.page();
+    }}();
+  </script>
+</head>
+
+<body>
+  <div class="container">
+    <!-- Static navbar -->
+      <nav class="navbar navbar-default">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">Flayva</a>
+          </div>
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+              <li class="active"><a href="#">Home</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+              <li><a href="https://www.mongodb.com/cloud/stitch" target="_blank">Check out MongoDB Stitch</a></li>
+              <li><a href="https://www.mongodb.com/cloud/atlas" target="_blank">MongoDB Atlas</a></li>
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div><!--/.container-fluid -->
+      </nav>
+
+      <!-- Main component for a primary marketing message or call to action -->
+      <div class="jumbotron">
+        <h1 id="1">Banana</h1>
+        <h3>Flavor of the Day Thursday, April 19</h3>
+        <p>This is an example of how one would track a user clicking a favourite button with a combination of <a href="https://segment.com/" target="_blank">Segment</a> and <a href="https://www.mongodb.com/cloud/stitch" target="_blank"> MongoDB Stitch</a>!</p>
+        <p>
+          <button type="button" id="1" class="btn btn-success btn-lg">
+            <span class="glyphicon glyphicon-star" aria-hidden="true"></span> Favorite
+          </button>
+        </p>
+      </div>
+
+      <div class="jumbotron">
+        <h1 id="2">Apple</h1>
+        <h3>Flavor of the Day Wednesday, April 18</h3>
+        <p>This is an example of how one would track a user clicking a favourite button with a combination of <a href="https://segment.com/" target="_blank">Segment</a> and <a href="https://www.mongodb.com/cloud/stitch" target="_blank"> MongoDB Stitch</a>!</p>
+        <p>
+          <button type="button" id="2" class="btn btn-success btn-lg">
+            <span class="glyphicon glyphicon-star" aria-hidden="true"></span> Favorite
+          </button>
+        </p>
+      </div>
+
+  </div>
+
+
+  <!-- jQuery library -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script type="text/javascript">
+    $(".btn").click(function() {
+      var itemId = this.id;
+      var itemName = $("h1#" + this.id).text();
+      alert("You marked item " + itemName  + " as a favorite!");
+
+      analytics.track("Favorited", {
+        itemId: this.id,
+        itemName: itemName
+      });
+    })
+  </script>
+</body>
+
+</html>

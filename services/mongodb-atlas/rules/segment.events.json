@@ -1,0 +1,32 @@
+{
+    "id": "5d945d77c86c26d750b0b0b9",
+    "database": "segment",
+    "collection": "events",
+    "roles": [
+        {
+            "name": "default",
+            "apply_when": {
+                "owner_id": "%%user.id"
+            },
+            "write": true,
+            "insert": true,
+            "delete": true,
+            "additional_fields": {}
+        },
+        {
+            "name": "role 2",
+            "apply_when": {},
+            "write": true,
+            "insert": true,
+            "delete": true,
+            "additional_fields": {}
+        }
+    ],
+    "schema": {
+        "properties": {
+            "_id": {
+                "bsonType": "objectId"
+            }
+        }
+    }
+}
