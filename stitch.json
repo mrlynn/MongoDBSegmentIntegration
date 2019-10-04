@@ -1,12 +1,10 @@
 {
-    "app_id": "segment-rmzdl",
     "config_version": 20180301,
     "name": "segment",
     "location": "US-VA",
     "deployment_model": "LOCAL",
     "security": {},
     "hosting": {
-        "enabled": true,
-        "app_default_domain": "segment-rmzdl.mongodbstitch.com"
+        "enabled": true
     }
 }
